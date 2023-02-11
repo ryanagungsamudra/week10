@@ -15,6 +15,7 @@ import netflix from "../../assets/netflix.png";
 import boby from "../../assets/boby.png";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   const navbarClass = {
@@ -24,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Navbar navbarClass={navbarClass} />
-      <div className="container mx-auto mt-28 md:flex md:px-[6rem]">
+      <div className="container mx-auto mt-[5rem] md:flex md:px-[6rem]">
 
         {/* Left Side Start */}
         <div className="hidden md:block md:w-[30%] md:pl-[1rem]">
@@ -110,9 +111,9 @@ export default function Home() {
             <div className="md:w-1/2">
               <div className="flex justify-between px-8 pt-8">
                 <h1 className="font-bold text-[18px]">Transaction History</h1>
-                <p className="font-semibold text-[14px] text-primary">
+                <Link href='/history' className="font-semibold text-[14px] text-primary">
                   See all
-                </p>
+                </Link>
               </div>
               {/* Transaction history start */}
               <div className="flex flex-wrap pb-10">

@@ -24,7 +24,8 @@ export default function History() {
   return (
     <>
       <Navbar navbarClass={navbarClass} />
-      <div className="container mx-auto mt-28 md:flex md:px-[6rem]">
+
+      <div className="container mx-auto mt-[5rem] md:flex md:px-[6rem]">
         {/* Left Side Start */}
         <div className="hidden md:block md:w-[30%] md:pl-[1rem]">
           <div className="inline-flex w-full mt-[4.5rem]">
@@ -107,9 +108,9 @@ export default function History() {
               <div className="flex flex-wrap pb-10">
                 <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
                   <div className="w-[20%]">
-                    <img
+                    <Image
                       className="w-[40%] p-2"
-                      src="../fazzpay/src/assets/samuel.png"
+                      src={samuel}
                       alt=""
                     />
                   </div>
@@ -125,9 +126,9 @@ export default function History() {
                 </div>
                 <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
                   <div className="w-[20%] ">
-                    <img
+                    <Image
                       className="w-[40%] p-2"
-                      src="../fazzpay/src/assets/spotify.png"
+                      src={spotify}
                       alt=""
                     />
                   </div>
@@ -143,9 +144,9 @@ export default function History() {
                 </div>
                 <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
                   <div className="w-[20%]">
-                    <img
+                    <Image
                       className="w-[40%] p-2"
-                      src="../fazzpay/src/assets/netflix.png"
+                      src={netflix}
                       alt=""
                     />
                   </div>
@@ -161,9 +162,9 @@ export default function History() {
                 </div>
                 <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
                   <div className="w-[20%]">
-                    <img
+                    <Image
                       className="w-[40%] p-2"
-                      src="../fazzpay/src/assets/boby.png"
+                      src={boby}
                       alt=""
                     />
                   </div>
@@ -179,9 +180,9 @@ export default function History() {
                 </div>
                 <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
                   <div className="w-[20%]">
-                    <img
+                    <Image
                       className="w-[40%] p-2"
-                      src="../fazzpay/src/assets/boby.png"
+                      src={boby}
                       alt=""
                     />
                   </div>
@@ -197,9 +198,9 @@ export default function History() {
                 </div>
                 <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
                   <div className="w-[20%]">
-                    <img
+                    <Image
                       className="w-[40%] p-2"
-                      src="../fazzpay/src/assets/boby.png"
+                      src={boby}
                       alt=""
                     />
                   </div>
@@ -219,9 +220,9 @@ export default function History() {
             {/* main-center-end */}
           </div>
         </div>
-
         {/* Right Side End */}
       </div>
+
       <Footer />
     </>
   );

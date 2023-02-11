@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6379F4',
+                        secondary: '#ffffff',
+                        tersier: '#473AD10F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar bg-secondary/80 text-primary fixed top-0 left-0 z-50 px-6 py-6 rounded-b-lg">
+        <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">fazzpay</a>
+        </div>
+        <div class="flex-none">
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <img src="../fazzpay/src/assets/ava.png" />
+                    </div>
+                </label>
+                <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <li>
+                        <a class="justify-between">
+                            Profile
+                        </a>
+                    </li>
+                    <li><a>Settings</a></li>
+                    <li><a>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto mt-28 md:flex">
+
+        <!-- Left Side Start -->
+        <div class="hidden md:block md:w-[30%] md:pl-[5rem]">
+            <div class="inline-flex w-full mt-[4.5rem]">
+                <img src="../fazzpay/src/assets/home/grid.png" alt="">
+                <p class="text-lg font-bold ml-8">Dashboard</p>
+            </div>
+            <div class="inline-flex w-full py-[2.5rem]">
+                <img src="../fazzpay/src/assets/home/arrow-up-side.svg" alt="">
+                <p class="text-lg font-bold ml-8">Transfer</p>
+            </div>
+            <div class="inline-flex w-full">
+                <img src="../fazzpay/src/assets/home/plus.png" alt="">
+                <p class="text-lg font-bold ml-8">Top Up</p>
+            </div>
+            <div class="inline-flex w-full py-[2.5rem]">
+                <img src="../fazzpay/src/assets/home/user.png" alt="">
+                <p class="text-lg font-bold ml-8">Profile</p>
+            </div>
+            <div class="inline-flex w-full mt-[31rem]">
+                <img src="../fazzpay/src/assets/home/log-out.png" alt="">
+                <p class="text-lg font-bold ml-8">Logout</p>
+            </div>
+        </div>
+        <!-- Left Side End -->
+
+        <!-- Right Side Start -->
+        <div class="w-full md:w-[70%] md:pr-[5rem]">
+            <div class="flex items-center pl-6 md:hidden">
+                <div class="w-[50%] flex-1">
+                    <h1>Hello, <br><span class="font-bold">Ryan Agung Samudra</span></h1>
+                </div>
+            </div>
+    
+            <div class="flex flex-wrap items-center pl-6 w-[89vw] h-[20vh] mt-6 rounded-[20px] bg-primary mx-auto md:w-full md:h-[190px] md:justify-between md:pl-[5rem]">
+                <div class="md:w-1/2">
+                    <p class="w-full text-secondary font-normal text-sm pt-4 md:text-[18px]">Balance</p>
+                    <h1 class="w-full text-secondary font-bold text-2xl md:text-[40px] md:py-5">Rp120.000</h1>
+                    <p class="w-full text-secondary font-semibold text-sm pb-4 md:text-[14px]">+62 813-9387-7946</p>
+                </div>
+                <div class="hidden md:flex md:flex-col">
+                    <div class="btn btn-ghost bg-slate-200 normal-case px-[3.6rem] rounded-[10px] md:w-[162px] md:mb-2 md:mr-10 md:px-[0] md:bg-secondary/20 md:border-secondary md:text-secondary md:text-[18px]">Transfer</div>
+                    <div class="btn btn-ghost bg-slate-200 normal-case px-[3.6rem] rounded-[10px] md:w-[162px] md:mt-2 md:mr-10 md:px-[0] md:bg-secondary/20 md:border-secondary md:text-secondary md:text-[18px]">Top Up</div>
+                </div>
+            </div>
+    
+            <div class="flex justify-center pt-6 md:hidden">
+                <div class="btn btn-ghost bg-slate-200 normal-case px-[3.6rem] mr-2 rounded-[10px]">Transfer</div>
+                <div class="btn btn-ghost bg-slate-200 normal-case px-[3.6rem] ml-2 rounded-[10px]">Top Up</div>
+            </div>
+    
+            <div class="md:flex md:mt-[5rem]">
+                <!-- main-center start -->
+                <div class="md:w-full">
+                    <div class="flex justify-between px-8 pt-8">
+                        <h1 class="font-bold text-[18px]">Transaction History</h1>
+                        <select class="select w-1/5 max-w-xs mt-[-0.7rem]">
+                            <option disabled selected>Select Filter</option>
+                            <option>Name</option>
+                            <option>Status</option>
+                            <option>Amount</option>
+                        </select>
+                    </div>
+                    <!-- Transaction history start -->
+                    <div class="flex flex-wrap pb-10">
+                        <div class="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                            <div class="w-[20%]">
+                                <img class="w-[40%] p-2" src="../fazzpay/src/assets/samuel.png" alt="">
+                            </div>
+                            <div class="w-[45%]">
+                                <h1 class="text-base font-bold">Samuel Suhi</h1>
+                                <p class="text-sm font-normal">Transfer</p>
+                            </div>
+                            <div class="w-[35%]">
+                                <h1 class="text-lg font-bold text-end text-[#1EC15F]">+Rp50.000</h1>
+                            </div>
+                        </div>
+                
+                        <div class="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                            <div class="w-[20%] ">
+                                <img class="w-[40%] p-2" src="../fazzpay/src/assets/spotify.png" alt="">
+                            </div>
+                            <div class="w-[45%]">
+                                <h1 class="text-base font-bold">Spotify</h1>
+                                <p class="text-sm font-normal">Subscription</p>
+                            </div>
+                            <div class="w-[35%]">
+                                <h1 class="text-lg font-bold text-end text-[#FF5B37]">-Rp49.000</h1>
+                            </div>
+                        </div>
+            
+                        <div class="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                            <div class="w-[20%]">
+                                <img class="w-[40%] p-2" src="../fazzpay/src/assets/netflix.png" alt="">
+                            </div>
+                            <div class="w-[45%]">
+                                <h1 class="text-base font-bold">Netflix</h1>
+                                <p class="text-sm font-normal">Subscription</p>
+                            </div>
+                            <div class="w-[35%]">
+                                <h1 class="text-lg font-bold text-end text-[#FF5B37]">-Rp149.000</h1>
+                            </div>
+                        </div>
+                
+                        <div class="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                            <div class="w-[20%]">
+                                <img class="w-[40%] p-2" src="../fazzpay/src/assets/boby.png" alt="">
+                            </div>
+                            <div class="w-[45%]">
+                                <h1 class="text-base font-bold">Bobi Sammy</h1>
+                                <p class="text-sm font-normal">Transfer</p>
+                            </div>
+                            <div class="w-[35%]">
+                                <h1 class="text-lg font-bold text-end text-[#1EC15F]">+Rp1.150.000</h1>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                            <div class="w-[20%]">
+                                <img class="w-[40%] p-2" src="../fazzpay/src/assets/boby.png" alt="">
+                            </div>
+                            <div class="w-[45%]">
+                                <h1 class="text-base font-bold">Bobi Sammy</h1>
+                                <p class="text-sm font-normal">Transfer</p>
+                            </div>
+                            <div class="w-[35%]">
+                                <h1 class="text-lg font-bold text-end text-[#1EC15F]">+Rp1.150.000</h1>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                            <div class="w-[20%]">
+                                <img class="w-[40%] p-2" src="../fazzpay/src/assets/boby.png" alt="">
+                            </div>
+                            <div class="w-[45%]">
+                                <h1 class="text-base font-bold">Bobi Sammy</h1>
+                                <p class="text-sm font-normal">Transfer</p>
+                            </div>
+                            <div class="w-[35%]">
+                                <h1 class="text-lg font-bold text-end text-[#1EC15F]">+Rp1.150.000</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Transaction history end -->
+                </div>
+                <!-- main-center-end -->
+            </div>
+        </div>
+        <!-- Right Side End -->
+
+    </div>
+    <!-- Footer start -->
+    <div class="hidden md:block md:flex md:justify-between md:bg-primary md:text-secondary md:h-[68px] md:items-center md:px-[5rem]">
+        <p>2020 FazzPay. All right reserved.</p>
+        <div class="flex">
+            <p class="pr-4">+62 5637 8882 9901</p>
+            <p>contact@fazzpay.com</p>
+        </div>
+    </div>
+    <!-- Footer end -->
+</body>
+
+</html>

@@ -38,7 +38,8 @@ export default function SidebarLeft() {
             </label>
             <h3 className="text-lg font-bold">Top Up</h3>
             <p className="py-4">Enter the amount of money, and click submit</p>
-            <input placeholder="input amount" className="border rounded-2xl placeholder:px-4 py-4" />
+            <input type="number" placeholder="input amount" className="border rounded-2xl placeholder:px-4 py-4 w-full" />
+            <div className="btn btn-primary bg-primary px-4 rounded-2xl normal-case ml-[24rem] mt-6">Submit</div>
           </div>
         </div>
         {/* Modal End */}

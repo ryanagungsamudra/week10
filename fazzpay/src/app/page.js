@@ -17,6 +17,8 @@ export default function Home() {
       <Navbar navbarClass={navbarClass}/>
       {/* Navbar End */}
       <Image className='absolute -z-10' src={bgPrimary} />
+
+      {/* Section 1 start */}
       <div className='container absolute -bottom-[13.5rem] z-0'>
           <div className='flex flex-wrap'>
 
@@ -31,6 +33,13 @@ export default function Home() {
             </div>
           </div>
       </div>
+      {/* Section 1 end */}
+
+      {/* Section 2 start */}
+      <div className='container absolute top-[49rem] mx-auto bg-[#473AD1]/5 h-[300px]'>
+        <Image></Image>
+      </div>
+      {/* Section 2 end */}
     </div>
   )
 }

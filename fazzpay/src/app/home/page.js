@@ -16,6 +16,7 @@ import boby from "../../assets/boby.png";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import SidebarLeft from "@/components/SidebarLeft";
 
 export default function Home() {
   const navbarClass = {
@@ -28,28 +29,7 @@ export default function Home() {
       <div className="container mx-auto mt-[5rem] md:flex md:px-[6rem] md:pb-[2rem]">
 
         {/* Left Side Start */}
-        <div className="hidden md:block md:w-[30%] md:pl-[1rem]">
-          <div className="inline-flex w-full mt-[4.5rem]">
-            <Image src={dashboard} alt="" />
-            <p className="text-lg font-bold ml-8">Dashboard</p>
-          </div>
-          <div className="inline-flex w-full py-[2.5rem]">
-            <Image src={transfer} alt="" />
-            <p className="text-lg font-bold ml-8">Transfer</p>
-          </div>
-          <div className="inline-flex w-full">
-            <Image src={topup} alt="" />
-            <p className="text-lg font-bold ml-8">Top Up</p>
-          </div>
-          <div className="inline-flex w-full py-[2.5rem]">
-            <Image src={profile} alt="" />
-            <p className="text-lg font-bold ml-8">Profile</p>
-          </div>
-          <div className="inline-flex w-full mt-[22rem]">
-            <Image src={logout} alt="" />
-            <p className="text-lg font-bold ml-8">Logout</p>
-          </div>
-        </div>
+        <SidebarLeft />
         {/* Left Side End */}
 
         {/* Right Side Start */}

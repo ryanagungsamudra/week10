@@ -15,9 +15,8 @@ import netflix from "../../assets/netflix.png";
 import boby from "../../assets/boby.png";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 
-export default function Home() {
+export default function Transfer() {
   const navbarClass = {
     color: "navbar bg-secondary/80 fixed top-0 left-0 z-50s py-6 rounded-b-lg",
     title: "btn btn-ghost normal-case text-[29px] font-bold text-primary",
@@ -25,10 +24,10 @@ export default function Home() {
   return (
     <>
       <Navbar navbarClass={navbarClass} />
-      <div className="container mx-auto mt-[5rem] md:flex md:px-[6rem] md:pb-[2rem]">
 
+      <div className="container mx-auto mt-[5rem] md:flex md:px-[6rem]">
         {/* Left Side Start */}
-        <div className="hidden md:block md:w-[30%] md:pl-[1rem]">
+        <div className="hidden md:block md:w-[30%] md:shadow-lg md:pl-[1rem]">
           <div className="inline-flex w-full mt-[4.5rem]">
             <Image src={dashboard} alt="" />
             <p className="text-lg font-bold ml-8">Dashboard</p>
@@ -45,7 +44,7 @@ export default function Home() {
             <Image src={profile} alt="" />
             <p className="text-lg font-bold ml-8">Profile</p>
           </div>
-          <div className="inline-flex w-full mt-[22rem]">
+          <div className="inline-flex w-full mt-[20rem]">
             <Image src={logout} alt="" />
             <p className="text-lg font-bold ml-8">Logout</p>
           </div>
@@ -53,7 +52,7 @@ export default function Home() {
         {/* Left Side End */}
 
         {/* Right Side Start */}
-        <div className="w-full md:w-[70%]">
+        <div className="w-full md:w-[70%] md:border">
           <div className="flex items-center pl-6 pt-[2rem] md:hidden">
             <div className="w-[50%] flex-1">
               <h1>
@@ -62,7 +61,7 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="flex flex-wrap items-center pl-6 w-[89vw] h-[20vh] mt-6 rounded-[20px] bg-primary mx-auto md:w-full md:h-[190px] md:justify-between md:pl-[5rem]">
+          <div className="flex flex-wrap items-center pl-6 w-[89vw] h-[20vh] mt-6 rounded-[20px] bg-primary mx-auto md:w-full md:h-[190px] md:justify-between md:pl-[5rem] md:hidden">
             <div className="md:w-1/2">
               <p className="w-full text-secondary font-normal text-sm pt-4 md:text-[18px]">
                 Balance
@@ -91,86 +90,111 @@ export default function Home() {
               Top Up
             </div>
           </div>
-          <div className="md:flex md:mt-[5rem]">
+          <div className="md:flex md:mt-[2rem]">
             {/* main-center start */}
-            <div className="hidden md:block md:w-1/2 md:text-center">
-              <div className="flex">
-                <div className="w-1/2">
-                  <Image className="mx-auto" src={arrowdown} alt="" />
-                  <p>Income</p>
-                  <p>Rp2.120.000</p>
-                </div>
-                <div className="w-1/2">
-                  <Image className="mx-auto" src={arrowup} alt="" />
-                  <p>Expense</p>
-                  <p>Rp1.560.000</p>
+            <div className="md:w-full">
+              <div>
+                <h1 className="font-bold text-[18px] w-full px-[2.5rem]">
+                  Search Receiver
+                </h1>
+                <div className="relative w-[92%] mx-auto">
+                  <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <svg
+                      aria-hidden="true"
+                      className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="voice-search"
+                    className="rounded-xl my-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search receiver here"
+                    required
+                  />
+                  <button
+                    type="button"
+                    className="flex absolute inset-y-0 right-0 items-center pr-3"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
-              <Image className="pt-[7rem]" src={graphic} alt="" />
-            </div>
-            <div className="md:w-1/2">
-              <div className="flex justify-between px-8 pt-8">
-                <h1 className="font-bold text-[18px]">Transaction History</h1>
-                <Link href='/history' className="font-semibold text-[14px] text-primary">
-                  See all
-                </Link>
-              </div>
+
               {/* Transaction history start */}
               <div className="flex flex-wrap pb-10">
-                <div className="flex items-center py-6 pl-6 pr-6 shadow-lg w-full">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%]">
-                    <Image className="w-[70%]" src={samuel} alt="" />
+                    <Image className="w-[60%] p-2" src={samuel} alt="" />
                   </div>
                   <div className="w-[45%]">
                     <h1 className="text-base font-bold">Samuel Suhi</h1>
                     <p className="text-sm font-normal">Transfer</p>
                   </div>
-                  <div className="w-[35%]">
-                    <h1 className="text-lg font-bold text-end text-[#1EC15F]">
-                      +Rp50.000
-                    </h1>
-                  </div>
                 </div>
-                <div className="flex items-center py-6 pl-6 pr-6 shadow-lg w-full">
-                  <div className="w-[20%]">
-                    <Image className="w-[70%]" src={spotify} alt="" />
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
+                  <div className="w-[20%] ">
+                    <Image className="w-[60%] p-2" src={spotify} alt="" />
                   </div>
                   <div className="w-[45%]">
                     <h1 className="text-base font-bold">Spotify</h1>
                     <p className="text-sm font-normal">Subscription</p>
                   </div>
-                  <div className="w-[35%]">
-                    <h1 className="text-lg font-bold text-end text-[#FF5B37]">
-                      -Rp49.000
-                    </h1>
-                  </div>
                 </div>
-                <div className="flex items-center py-6 pl-6 pr-6 shadow-lg w-full">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%]">
-                    <Image className="w-[70%]" src={netflix} alt="" />
+                    <Image className="w-[60%] p-2" src={netflix} alt="" />
                   </div>
                   <div className="w-[45%]">
                     <h1 className="text-base font-bold">Netflix</h1>
                     <p className="text-sm font-normal">Subscription</p>
                   </div>
-                  <div className="w-[35%]">
-                    <h1 className="text-lg font-bold text-end text-[#FF5B37]">
-                      -Rp149.000
-                    </h1>
-                  </div>
                 </div>
-                <div className="flex items-center py-6 pl-6 pr-6 shadow-lg w-full">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%]">
-                    <Image className="w-[70%]" src={boby} alt="" />
+                    <Image className="w-[60%] p-2" src={boby} alt="" />
                   </div>
                   <div className="w-[45%]">
                     <h1 className="text-base font-bold">Bobi Sammy</h1>
                     <p className="text-sm font-normal">Transfer</p>
                   </div>
-                  <div className="w-[35%]">
-                    <h1 className="text-lg font-bold text-end text-[#1EC15F]">
-                      +Rp1.150.000
-                    </h1>
+                </div>
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
+                  <div className="w-[20%]">
+                    <Image className="w-[60%] p-2" src={boby} alt="" />
+                  </div>
+                  <div className="w-[45%]">
+                    <h1 className="text-base font-bold">Bobi Sammy</h1>
+                    <p className="text-sm font-normal">Transfer</p>
+                  </div>
+                </div>
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
+                  <div className="w-[20%]">
+                    <Image className="w-[60%] p-2" src={boby} alt="" />
+                  </div>
+                  <div className="w-[45%]">
+                    <h1 className="text-base font-bold">Bobi Sammy</h1>
+                    <p className="text-sm font-normal">Transfer</p>
                   </div>
                 </div>
               </div>
@@ -180,8 +204,8 @@ export default function Home() {
           </div>
         </div>
         {/* Right Side End */}
-
       </div>
+
       <Footer />
     </>
   );

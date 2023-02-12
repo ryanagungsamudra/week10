@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Navbar({navbarClass}) {
   return (
-    <div className={`${navbarClass.color} px-[6rem]`}>
+    <div className={`${navbarClass.color} md:px-[6rem]`}>
         <div className="flex-1">
           <Link href='/' className={navbarClass.title}>FazzPay</Link>
         </div>

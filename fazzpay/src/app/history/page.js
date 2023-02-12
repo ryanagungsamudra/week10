@@ -27,7 +27,7 @@ export default function History() {
 
       <div className="container mx-auto mt-[5rem] md:flex md:px-[6rem]">
         {/* Left Side Start */}
-        <div className="hidden md:block md:w-[30%] md:pl-[1rem]">
+        <div className="hidden md:block md:w-[30%] md:shadow-lg md:pl-[1rem]">
           <div className="inline-flex w-full mt-[4.5rem]">
             <Image src={dashboard} alt="" />
             <p className="text-lg font-bold ml-8">Dashboard</p>
@@ -44,7 +44,7 @@ export default function History() {
             <Image src={profile} alt="" />
             <p className="text-lg font-bold ml-8">Profile</p>
           </div>
-          <div className="inline-flex w-full mt-[22rem]">
+          <div className="inline-flex w-full mt-[15rem]">
             <Image src={logout} alt="" />
             <p className="text-lg font-bold ml-8">Logout</p>
           </div>
@@ -52,8 +52,8 @@ export default function History() {
         {/* Left Side End */}
 
         {/* Right Side Start */}
-        <div className="w-full md:w-[70%] md:pr-[5rem]">
-          <div className="flex items-center pl-6 md:hidden">
+        <div className="w-full md:w-[70%] md:border">
+          <div className="flex items-center pl-6 pt-[2rem] md:hidden">
             <div className="w-[50%] flex-1">
               <h1>
                 Hello, <br />
@@ -61,7 +61,7 @@ export default function History() {
               </h1>
             </div>
           </div>
-          <div className="flex flex-wrap items-center pl-6 w-[89vw] h-[20vh] mt-6 rounded-[20px] bg-primary mx-auto md:w-full md:h-[190px] md:justify-between md:pl-[5rem]">
+          <div className="flex flex-wrap items-center pl-6 w-[89vw] h-[20vh] mt-6 rounded-[20px] bg-primary mx-auto md:w-full md:h-[190px] md:justify-between md:pl-[5rem] md:hidden">
             <div className="md:w-1/2">
               <p className="w-full text-secondary font-normal text-sm pt-4 md:text-[18px]">
                 Balance
@@ -93,7 +93,7 @@ export default function History() {
           <div className="md:flex md:mt-[5rem]">
             {/* main-center start */}
             <div className="md:w-full">
-              <div className="flex justify-between px-8 pt-8">
+              <div className="flex justify-between px-8 pt-8 md:-mt-[4rem]">
                 <h1 className="font-bold text-[18px]">Transaction History</h1>
                 <select className="select w-1/5 max-w-xs mt-[-0.7rem]">
                   <option disabled selected>
@@ -106,10 +106,10 @@ export default function History() {
               </div>
               {/* Transaction history start */}
               <div className="flex flex-wrap pb-10">
-                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%]">
                     <Image
-                      className="w-[40%] p-2"
+                      className="w-[60%] p-2"
                       src={samuel}
                       alt=""
                     />
@@ -124,10 +124,10 @@ export default function History() {
                     </h1>
                   </div>
                 </div>
-                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%] ">
                     <Image
-                      className="w-[40%] p-2"
+                      className="w-[60%] p-2"
                       src={spotify}
                       alt=""
                     />
@@ -142,10 +142,10 @@ export default function History() {
                     </h1>
                   </div>
                 </div>
-                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%]">
                     <Image
-                      className="w-[40%] p-2"
+                      className="w-[60%] p-2"
                       src={netflix}
                       alt=""
                     />
@@ -160,10 +160,10 @@ export default function History() {
                     </h1>
                   </div>
                 </div>
-                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%]">
                     <Image
-                      className="w-[40%] p-2"
+                      className="w-[60%] p-2"
                       src={boby}
                       alt=""
                     />
@@ -178,10 +178,10 @@ export default function History() {
                     </h1>
                   </div>
                 </div>
-                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%]">
                     <Image
-                      className="w-[40%] p-2"
+                      className="w-[60%] p-2"
                       src={boby}
                       alt=""
                     />
@@ -196,10 +196,10 @@ export default function History() {
                     </h1>
                   </div>
                 </div>
-                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4">
+                <div className="flex items-center pl-6 pr-6 h-20 shadow-lg w-full mb-4 md:shadow-none">
                   <div className="w-[20%]">
                     <Image
-                      className="w-[40%] p-2"
+                      className="w-[60%] p-2"
                       src={boby}
                       alt=""
                     />
